@@ -15,9 +15,9 @@ class Train
     @number = number
     @wagons = []
     @speed = 0
+    validate!
     @@all_trains[number] = self
     register_instance
-    validate!
   end
 
   def go
