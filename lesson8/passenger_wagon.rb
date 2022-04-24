@@ -1,17 +1,12 @@
 class PassengerWagon < Wagon
-  attr_reader :seats, :taken_seats
 
-  def initialize(seats)
-    @seats = seats
+  def initialize(space)
+    super
     @type = :passenger
-    @taken_seats = 0
   end
 
-  def take_seats
-    @taken_seats += 1 unless free_seats.zero?
-  end
-
-  def free_seats
-    @seats - @taken_seats
+  def take_space
+    @taken_space += 1 unless free_space.zero?
   end   
+  
 end
