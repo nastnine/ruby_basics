@@ -227,7 +227,7 @@ class Interface
       puts 'Выберете вагон, чтобы занять место'
       show_array(selected_train.wagons)
       selected_wagon = select_from_array(selected_train.wagons)
-      selected_wagon.take_seats
+      selected_wagon.take_space
 
     elsif selected_train.is_a?(CargoTrain)
       puts 'Выберете вагон'
@@ -235,7 +235,7 @@ class Interface
       selected_wagon = select_from_array(selected_train.wagons)
       puts 'Какой объем необходимо занять?'
       volume = gets.to_i
-      selected_wagon.take_volume(volume)
+      selected_wagon.take_space(volume)
     end
   end
 
